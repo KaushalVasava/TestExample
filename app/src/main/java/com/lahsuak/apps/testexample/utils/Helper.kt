@@ -1,18 +1,15 @@
 package com.lahsuak.apps.testexample.utils
 
-class Helper {
-    fun isPalindrome(input: String): Boolean {
-        var i = 0
-        var len = input.length - 1
-        var result = true
-        while (i < len) {
-            if (input[i] != input[len]) {
-                result = false
-                break
-            }
-            i++
-            len--
+import java.io.InputStreamReader
+
+object Helper {
+    fun readFileResource(fileName: String): String{
+        val inputStream = Helper::class.java.getResourceAsStream(fileName)
+        val builder = StringBuilder()
+        val reader = InputStreamReader(inputStream,Charsets.UTF_8)
+        reader.readLines().forEach{
+            builder.append(it)
         }
-        return result
+        return builder.toString()
     }
 }
