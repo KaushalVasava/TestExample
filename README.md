@@ -1,7 +1,7 @@
 # TestExample
 It is a project in which you will learn android Testing using JUnit4, Espresso, mockito testing library.
 
-
+You will find different tests on different brances.
 
 # Why do I even need to “test” my code? 🤔
 
